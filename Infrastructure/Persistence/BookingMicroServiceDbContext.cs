@@ -58,6 +58,10 @@ namespace Infrastructure.Persistence
                 entity.HasKey(r => r.RequestId);
 
                 //RELACION: Reserve
+                //entity
+                //    .HasOne<Reserve>(r => r.Reserve)
+                //    .WithOne(r => r.Request)
+                //    .HasForeignKey<Reserve>(r => r.ReserveId);
             });
 
             //RESERVE
@@ -73,7 +77,7 @@ namespace Infrastructure.Persistence
                 entity
                     .HasOne<Request>(r => r.Request)
                     .WithOne(r => r.Reserve)
-                    .HasForeignKey<Request>(r => r.RequestId);
+                    .HasForeignKey<Reserve>(r => r.RequestId);
             });
         }
     }

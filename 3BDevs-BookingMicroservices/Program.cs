@@ -1,4 +1,8 @@
+using Application.Interfaces;
+using Application.UseCases;
+using Infrastructure.Commands;
 using Infrastructure.Persistence;
+using Infrastructure.Queries;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -11,6 +15,9 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 //DEPENDENCIAS
+builder.Services.AddScoped<IRequestService, RequestService>();
+builder.Services.AddScoped<IRequestCommand, RequestCommand>();
+builder.Services.AddScoped<IRequestQuery, RequestQuery>();
 
 //CONTEXT
 var connectionString = builder.Configuration["ConnectionString"];
