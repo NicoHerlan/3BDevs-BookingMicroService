@@ -29,7 +29,7 @@ namespace Infrastructure.Migrations
                 {
                     ReserveId = table.Column<Guid>(type: "uuid", nullable: false),
                     RequestId = table.Column<Guid>(type: "uuid", nullable: false),
-                    PlaceId = table.Column<Guid>(type: "uuid", nullable: false),
+                    RoomId = table.Column<Guid>(type: "uuid", nullable: false),
                     DayTime = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
                     PaymentId = table.Column<int>(type: "integer", nullable: false)
                 },
@@ -67,7 +67,7 @@ namespace Infrastructure.Migrations
                 columns: table => new
                 {
                     RequestId = table.Column<Guid>(type: "uuid", nullable: false),
-                    PlaceId = table.Column<Guid>(type: "uuid", nullable: false),
+                    RoomId = table.Column<Guid>(type: "uuid", nullable: false),
                     UserId = table.Column<int>(type: "integer", nullable: false),
                     Aprove = table.Column<bool>(type: "boolean", nullable: false)
                 },

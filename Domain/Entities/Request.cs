@@ -11,7 +11,7 @@ namespace Domain.Entities
     {
         [Key]
         public Guid RequestId { get; set; }
-        public Guid PlaceId { get; set; } //fk
+        public Guid RoomId { get; set; } //fk
         public int UserId { get; set; } //fk
         public bool Aprove { get; set; }
 

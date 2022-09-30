@@ -12,7 +12,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace Infrastructure.Migrations
 {
     [DbContext(typeof(BookingMicroServiceDbContext))]
-    [Migration("20220930155635_init")]
+    [Migration("20220930163133_init")]
     partial class init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -57,7 +57,7 @@ namespace Infrastructure.Migrations
                     b.Property<bool>("Aprove")
                         .HasColumnType("boolean");
 
-                    b.Property<Guid>("PlaceId")
+                    b.Property<Guid>("RoomId")
                         .HasColumnType("uuid");
 
                     b.Property<int>("UserId")
@@ -80,10 +80,10 @@ namespace Infrastructure.Migrations
                     b.Property<int>("PaymentId")
                         .HasColumnType("integer");
 
-                    b.Property<Guid>("PlaceId")
+                    b.Property<Guid>("RequestId")
                         .HasColumnType("uuid");
 
-                    b.Property<Guid>("RequestId")
+                    b.Property<Guid>("RoomId")
                         .HasColumnType("uuid");
 
                     b.HasKey("ReserveId");

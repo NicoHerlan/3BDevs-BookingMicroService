@@ -55,7 +55,7 @@ namespace Infrastructure.Migrations
                     b.Property<bool>("Aprove")
                         .HasColumnType("boolean");
 
-                    b.Property<Guid>("PlaceId")
+                    b.Property<Guid>("RoomId")
                         .HasColumnType("uuid");
 
                     b.Property<int>("UserId")
@@ -78,10 +78,10 @@ namespace Infrastructure.Migrations
                     b.Property<int>("PaymentId")
                         .HasColumnType("integer");
 
-                    b.Property<Guid>("PlaceId")
+                    b.Property<Guid>("RequestId")
                         .HasColumnType("uuid");
 
-                    b.Property<Guid>("RequestId")
+                    b.Property<Guid>("RoomId")
                         .HasColumnType("uuid");
 
                     b.HasKey("ReserveId");
